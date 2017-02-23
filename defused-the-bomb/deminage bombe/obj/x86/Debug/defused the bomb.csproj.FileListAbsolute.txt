@@ -1,0 +1,54 @@
+I:\Document\Fichier\Programmation\projet\Framework\__monogame\Deminage bombe\__application\ver4\deminage bombe\deminage bombe\bin\Windows\x86\Debug\Content\font\arial.xnb
+I:\Document\Fichier\Programmation\projet\Framework\__monogame\Deminage bombe\__application\ver4\deminage bombe\deminage bombe\bin\Windows\x86\Debug\Content\font\digital.xnb
+I:\Document\Fichier\Programmation\projet\Framework\__monogame\Deminage bombe\__application\ver4\deminage bombe\deminage bombe\bin\Windows\x86\Debug\Content\image\background.xnb
+I:\Document\Fichier\Programmation\projet\Framework\__monogame\Deminage bombe\__application\ver4\deminage bombe\deminage bombe\bin\Windows\x86\Debug\Content\image\bomb_arriere.xnb
+I:\Document\Fichier\Programmation\projet\Framework\__monogame\Deminage bombe\__application\ver4\deminage bombe\deminage bombe\bin\Windows\x86\Debug\Content\image\bomb_dessous.xnb
+I:\Document\Fichier\Programmation\projet\Framework\__monogame\Deminage bombe\__application\ver4\deminage bombe\deminage bombe\bin\Windows\x86\Debug\Content\image\bomb_dessus.xnb
+I:\Document\Fichier\Programmation\projet\Framework\__monogame\Deminage bombe\__application\ver4\deminage bombe\deminage bombe\bin\Windows\x86\Debug\Content\image\bomb_droite.xnb
+I:\Document\Fichier\Programmation\projet\Framework\__monogame\Deminage bombe\__application\ver4\deminage bombe\deminage bombe\bin\Windows\x86\Debug\Content\image\bomb_face.xnb
+I:\Document\Fichier\Programmation\projet\Framework\__monogame\Deminage bombe\__application\ver4\deminage bombe\deminage bombe\bin\Windows\x86\Debug\Content\image\bomb_gauche.xnb
+I:\Document\Fichier\Programmation\projet\Framework\__monogame\Deminage bombe\__application\ver4\deminage bombe\deminage bombe\bin\Windows\x86\Debug\Content\image\double-left-arrows-angles.xnb
+I:\Document\Fichier\Programmation\projet\Framework\__monogame\Deminage bombe\__application\ver4\deminage bombe\deminage bombe\bin\Windows\x86\Debug\Content\image\game_over.xnb
+I:\Document\Fichier\Programmation\projet\Framework\__monogame\Deminage bombe\__application\ver4\deminage bombe\deminage bombe\bin\Windows\x86\Debug\Content\image\title.xnb
+I:\Document\Fichier\Programmation\projet\Framework\__monogame\Deminage bombe\__application\ver4\deminage bombe\deminage bombe\bin\Windows\x86\Debug\Content\image\win.xnb
+I:\Document\Fichier\Programmation\projet\Framework\__monogame\Deminage bombe\__application\ver4\deminage bombe\deminage bombe\bin\Windows\x86\Debug\Content\image\GUI\new_game.xnb
+I:\Document\Fichier\Programmation\projet\Framework\__monogame\Deminage bombe\__application\ver4\deminage bombe\deminage bombe\bin\Windows\x86\Debug\Content\image\GUI\quit.xnb
+I:\Document\Fichier\Programmation\projet\Framework\__monogame\Deminage bombe\__application\ver4\deminage bombe\deminage bombe\bin\Windows\x86\Debug\Content\image\module\module_bomb\module_bomb.xnb
+I:\Document\Fichier\Programmation\projet\Framework\__monogame\Deminage bombe\__application\ver4\deminage bombe\deminage bombe\bin\Windows\x86\Debug\Content\image\module\module_wire\module.xnb
+I:\Document\Fichier\Programmation\projet\Framework\__monogame\Deminage bombe\__application\ver4\deminage bombe\deminage bombe\bin\Windows\x86\Debug\Content\image\module\module_wire\wire_black.xnb
+I:\Document\Fichier\Programmation\projet\Framework\__monogame\Deminage bombe\__application\ver4\deminage bombe\deminage bombe\bin\Windows\x86\Debug\Content\image\module\module_wire\wire_black_cut.xnb
+I:\Document\Fichier\Programmation\projet\Framework\__monogame\Deminage bombe\__application\ver4\deminage bombe\deminage bombe\bin\Windows\x86\Debug\Content\image\module\module_wire\wire_blue.xnb
+I:\Document\Fichier\Programmation\projet\Framework\__monogame\Deminage bombe\__application\ver4\deminage bombe\deminage bombe\bin\Windows\x86\Debug\Content\image\module\module_wire\wire_blue_cut.xnb
+I:\Document\Fichier\Programmation\projet\Framework\__monogame\Deminage bombe\__application\ver4\deminage bombe\deminage bombe\bin\Windows\x86\Debug\Content\image\module\module_wire\wire_green.xnb
+I:\Document\Fichier\Programmation\projet\Framework\__monogame\Deminage bombe\__application\ver4\deminage bombe\deminage bombe\bin\Windows\x86\Debug\Content\image\module\module_wire\wire_green_cut.xnb
+I:\Document\Fichier\Programmation\projet\Framework\__monogame\Deminage bombe\__application\ver4\deminage bombe\deminage bombe\bin\Windows\x86\Debug\Content\image\module\module_wire\wire_red.xnb
+I:\Document\Fichier\Programmation\projet\Framework\__monogame\Deminage bombe\__application\ver4\deminage bombe\deminage bombe\bin\Windows\x86\Debug\Content\image\module\module_wire\wire_red_cut.xnb
+I:\Document\Fichier\Programmation\projet\Framework\__monogame\Deminage bombe\__application\ver4\deminage bombe\deminage bombe\bin\Windows\x86\Debug\Content\image\module\module_wire\wire_white.xnb
+I:\Document\Fichier\Programmation\projet\Framework\__monogame\Deminage bombe\__application\ver4\deminage bombe\deminage bombe\bin\Windows\x86\Debug\Content\image\module\module_wire\wire_white_cut.xnb
+I:\Document\Fichier\Programmation\projet\Framework\__monogame\Deminage bombe\__application\ver4\deminage bombe\deminage bombe\bin\Windows\x86\Debug\Content\image\module\module_wire\wire_yellow.xnb
+I:\Document\Fichier\Programmation\projet\Framework\__monogame\Deminage bombe\__application\ver4\deminage bombe\deminage bombe\bin\Windows\x86\Debug\Content\image\module\module_wire\wire_yellow_cut.xnb
+I:\Document\Fichier\Programmation\projet\Framework\__monogame\Deminage bombe\__application\ver4\deminage bombe\deminage bombe\bin\Windows\x86\Debug\deminage bombe.exe
+I:\Document\Fichier\Programmation\projet\Framework\__monogame\Deminage bombe\__application\ver4\deminage bombe\deminage bombe\bin\Windows\x86\Debug\deminage bombe.pdb
+I:\Document\Fichier\Programmation\projet\Framework\__monogame\Deminage bombe\__application\ver4\deminage bombe\deminage bombe\bin\Windows\x86\Debug\MonoGame.Framework.dll
+I:\Document\Fichier\Programmation\projet\Framework\__monogame\Deminage bombe\__application\ver4\deminage bombe\deminage bombe\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+I:\Document\Fichier\Programmation\projet\Framework\__monogame\Deminage bombe\__application\ver4\deminage bombe\deminage bombe\bin\Windows\x86\Debug\SharpDX.dll
+I:\Document\Fichier\Programmation\projet\Framework\__monogame\Deminage bombe\__application\ver4\deminage bombe\deminage bombe\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+I:\Document\Fichier\Programmation\projet\Framework\__monogame\Deminage bombe\__application\ver4\deminage bombe\deminage bombe\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+I:\Document\Fichier\Programmation\projet\Framework\__monogame\Deminage bombe\__application\ver4\deminage bombe\deminage bombe\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+I:\Document\Fichier\Programmation\projet\Framework\__monogame\Deminage bombe\__application\ver4\deminage bombe\deminage bombe\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+I:\Document\Fichier\Programmation\projet\Framework\__monogame\Deminage bombe\__application\ver4\deminage bombe\deminage bombe\bin\Windows\x86\Debug\SharpDX.XInput.dll
+I:\Document\Fichier\Programmation\projet\Framework\__monogame\Deminage bombe\__application\ver4\deminage bombe\deminage bombe\bin\Windows\x86\Debug\SharpDX.RawInput.dll
+I:\Document\Fichier\Programmation\projet\Framework\__monogame\Deminage bombe\__application\ver4\deminage bombe\deminage bombe\bin\Windows\x86\Debug\SharpDX.Direct3D9.dll
+I:\Document\Fichier\Programmation\projet\Framework\__monogame\Deminage bombe\__application\ver4\deminage bombe\deminage bombe\bin\Windows\x86\Debug\MonoGame.Framework.xml
+I:\Document\Fichier\Programmation\projet\Framework\__monogame\Deminage bombe\__application\ver4\deminage bombe\deminage bombe\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+I:\Document\Fichier\Programmation\projet\Framework\__monogame\Deminage bombe\__application\ver4\deminage bombe\deminage bombe\bin\Windows\x86\Debug\SharpDX.xml
+I:\Document\Fichier\Programmation\projet\Framework\__monogame\Deminage bombe\__application\ver4\deminage bombe\deminage bombe\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+I:\Document\Fichier\Programmation\projet\Framework\__monogame\Deminage bombe\__application\ver4\deminage bombe\deminage bombe\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+I:\Document\Fichier\Programmation\projet\Framework\__monogame\Deminage bombe\__application\ver4\deminage bombe\deminage bombe\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+I:\Document\Fichier\Programmation\projet\Framework\__monogame\Deminage bombe\__application\ver4\deminage bombe\deminage bombe\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+I:\Document\Fichier\Programmation\projet\Framework\__monogame\Deminage bombe\__application\ver4\deminage bombe\deminage bombe\bin\Windows\x86\Debug\SharpDX.XInput.xml
+I:\Document\Fichier\Programmation\projet\Framework\__monogame\Deminage bombe\__application\ver4\deminage bombe\deminage bombe\bin\Windows\x86\Debug\SharpDX.RawInput.xml
+I:\Document\Fichier\Programmation\projet\Framework\__monogame\Deminage bombe\__application\ver4\deminage bombe\deminage bombe\bin\Windows\x86\Debug\SharpDX.Direct3D9.xml
+I:\Document\Fichier\Programmation\projet\Framework\__monogame\Deminage bombe\__application\ver4\deminage bombe\deminage bombe\obj\x86\Debug\defused the bomb.csprojResolveAssemblyReference.cache
+I:\Document\Fichier\Programmation\projet\Framework\__monogame\Deminage bombe\__application\ver4\deminage bombe\deminage bombe\obj\x86\Debug\deminage bombe.exe
+I:\Document\Fichier\Programmation\projet\Framework\__monogame\Deminage bombe\__application\ver4\deminage bombe\deminage bombe\obj\x86\Debug\deminage bombe.pdb
