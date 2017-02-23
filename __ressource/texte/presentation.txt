@@ -1,0 +1,9 @@
+hello tous le monde, donc je participe dans cette 5éme edition de gamecodeur avec le framework
+Monogame avec le langage C#(Donc du tout nouveau pour moi!, jamais essayé Monogame).
+
+Au début j'avais aucune idée, mais comme un de mes projets requiert un système de visual novel, j'ai décidé
+de faire un simulateur de deminage de bombe. En gros le principe sera d'arrêtez la bombe avant le temps impartie
+en resolvant des énigmes.Et si vous reussissez à deminer la bombe, vous gagnez.
+
+Après niveau particules, je pensais les mettres sur la souris et lorsque vous gagnez.
+Bonne chance tout le monde!^^
