@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace deminage_bombe
+namespace defused_the_bomb
 {
     public class GameTimer
     {
@@ -14,6 +14,13 @@ namespace deminage_bombe
         public double msec { get; private set; }
         public double sec { get; private set; }
         public double min { get; private set; }
+
+        public double CountMsec { get; private set; }
+        public double CountSec { get; private set; }
+        public double CountMin { get; private set; }
+
+        public double totalTime { get; private set; }
+
 
         public bool start { get; private set; } = false;
         public bool stop = false;
@@ -37,23 +44,48 @@ namespace deminage_bombe
         public void Update(GameTime gameTime)
         {
             time = gameTime;
-
             if (start)
             {
-            msec += time.ElapsedGameTime.TotalMilliseconds;
-            sec += time.ElapsedGameTime.TotalSeconds;
-            min += time.TotalGameTime.Minutes;
-            //Console.WriteLine("milliseconde : " + msec + " seconde : " + sec + " minute : " + min);
+                msec += time.ElapsedGameTime.TotalMilliseconds;
+                sec += time.ElapsedGameTime.TotalSeconds;
+                totalTime += time.ElapsedGameTime.TotalMilliseconds;
+                if (msec > 1000)
+                    msec = 0;
+                if (sec > 60)
+                {
+                    min += 1;
+                    sec = 0;
+                }
+
+                CountMsec -= time.ElapsedGameTime.TotalMilliseconds;
+
+                if (CountMsec < 0)
+                { 
+                    CountMsec = 1000;
+                    CountSec--;
+                }
+                if (CountSec < 0)
+                {
+                    CountSec = 59;
+                    CountMin--;
+                }
+
+            if (min > 60)
+            min = 0;
+                //Console.WriteLine("milliseconde : " + msec + " seconde : " + sec + " minute : " + min);
             }
 
 
-            if (msec > elapsed && !stop)
+            if (totalTime > elapsed && !stop)
                 Stop();
         }
 
         public GameTimer(double pElapsed)
         {
             elapsed = pElapsed;
+            CountMsec = pElapsed % (1000);
+            CountSec = ((pElapsed/(1000))%60);
+            CountMin = ((pElapsed/(1000*60))%60);
         }
     }
 }

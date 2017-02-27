@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System;
 
-namespace deminage_bombe
+namespace defused_the_bomb
 {
     /// <summary>
     /// This is the main type for your game.

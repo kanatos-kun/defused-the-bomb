@@ -7,11 +7,11 @@ using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
 
-namespace deminage_bombe
+namespace defused_the_bomb
 {
     public class spriteManager
     {
-        public Texture2D[] Tblimage = new Texture2D[24];
+        public Texture2D[] Tblimage = new Texture2D[31];
         public SpriteFont font;
         public ContentManager Content { private set; get; }
         public Texture2D image;
@@ -34,7 +34,7 @@ namespace deminage_bombe
             this.LoadContent(Content);
             image = Tblimage[pNumber];
             position = pPosition;
-            size = new Vector2(Tblimage[pNumber].Width, Tblimage[pNumber].Height);
+            //size = new Vector2(Tblimage[pNumber].Width, Tblimage[pNumber].Height);
         }
 
         public spriteManager()
@@ -71,9 +71,24 @@ namespace deminage_bombe
             Tblimage[20] = Content.Load<Texture2D>("image/module/module_wire/wire_red");
             Tblimage[21] = Content.Load<Texture2D>("image/module/module_wire/wire_red_cut");
 
-            //gui button
-            Tblimage[22] = Content.Load<Texture2D>("image/GUI/new_game");
-            Tblimage[23] = Content.Load<Texture2D>("image/GUI/quit");
+            //gui button inactive
+            Tblimage[22] = Content.Load<Texture2D>("image/GUI/new_game_inactive");
+            Tblimage[23] = Content.Load<Texture2D>("image/GUI/quit_inactive");
+
+            //module bomb
+            Tblimage[24] = Content.Load<Texture2D>("image/module/module_bomb/module_bomb");
+
+            //gameover et win
+            Tblimage[25] = Content.Load<Texture2D>("image/game_over");
+            Tblimage[26] = Content.Load<Texture2D>("image/win");
+
+            //gui button active
+            Tblimage[27] = Content.Load<Texture2D>("image/GUI/new_game_active");
+            Tblimage[28] = Content.Load<Texture2D>("image/GUI/quit_active");
+
+            //gui button hover
+            Tblimage[29] = Content.Load<Texture2D>("image/GUI/new_game_hover");
+            Tblimage[30] = Content.Load<Texture2D>("image/GUI/quit_hover");
 
         }
 

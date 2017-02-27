@@ -8,7 +8,7 @@ using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
-namespace deminage_bombe
+namespace defused_the_bomb
 {
     public class TitleScreen : GameManager
     {
@@ -21,11 +21,9 @@ namespace deminage_bombe
         fontManager FONThover;
         fontManager FONTclick;
         fontManager FONTclickRelease;
-        fontManager FONTtimeDisplay;
 
         MouseState mouse;
 
-        GameTimer timer;
 
 
         public override void ContentLoad(ContentManager Content)
@@ -34,8 +32,7 @@ namespace deminage_bombe
             //  [CONTENT_MANAGE]   -state,timer-
             //***************************************************************
 
-            state = "titleScreen";
-            timer = new GameTimer(2000);
+            scene = "titleScreen";
 
             //***************************************************************
             //  [CONTENT_MANAGE]        -image-
@@ -47,9 +44,9 @@ namespace deminage_bombe
             //  [CONTENT_MANAGE]        -gui-
             //***************************************************************
 
-            GUInewGame = new GuiButton(22,new Vector2(277,353),Content);
+            GUInewGame = new GuiButton(22, new Vector2(230, 353), Content);
             GUInewGame.timer.elapsed = 500;
-            GUIquit = new GuiButton(23, new Vector2(277, 492), Content);
+            GUIquit = new GuiButton(23, new Vector2(230, 492), Content);
 
             //***************************************************************
             //  [CONTENT_MANAGE]       -font-
@@ -59,13 +56,9 @@ namespace deminage_bombe
                                             "position mouseX : "         + mouse.X+
                                             " \n" + "position mouseY : " + mouse.Y+
                                             "",Vector2.Zero, Content);
-            FONThover = new fontManager(0,"Hover : " + GUInewGame.hover(),new Vector2(0,45),Content);
+            FONThover = new fontManager(0, "Hover : " + GUInewGame.hover(), new Vector2(0, 45), Content);
             FONTclick = new fontManager(0, "Click : " + GUInewGame.click(), new Vector2(0, 65), Content);
             FONTclickRelease = new fontManager(0, "ClickRelease : " + GUInewGame.clickRelease(), new Vector2(0, 85), Content);
-            FONTtimeDisplay = new fontManager(0, "Time : " + timer.msec, new Vector2(0, 105), Content);
-
-
-            timer.Start();
 
             base.ContentLoad(Content);
         }
@@ -101,21 +94,35 @@ namespace deminage_bombe
             FONThover.texte = ("Hover : " + GUInewGame.hover());
             FONTclick.texte = ("Click : " + GUInewGame.click());
             FONTclickRelease.texte = ("ClickRelease : " + GUInewGame.clickRelease());
-            FONTtimeDisplay.texte = "Time : " + timer.msec;
 
             //***************************************************************
             //  [UPDATE_MANAGE]    -gui-
             //***************************************************************
 
+            if (GUInewGame.hover() && GUInewGame.click())
+                GUInewGame.image = spriteManager.Instance.Tblimage[27];
+            else if (GUInewGame.hover())
+                GUInewGame.image = spriteManager.Instance.Tblimage[29];
+            else
+                GUInewGame.image = spriteManager.Instance.Tblimage[22];
+
+
+
+            if (GUIquit.hover() && GUIquit.click())
+                GUIquit.image = spriteManager.Instance.Tblimage[28];
+            else if (GUIquit.hover())
+                GUIquit.image = spriteManager.Instance.Tblimage[30];
+            else
+                GUIquit.image = spriteManager.Instance.Tblimage[23];
+
+
             GUInewGame.update(gameTime);
             if (GUInewGame.timer.stop)
-                changeScreen = "GameScreen";
+                transition = "GameScreen";
 
             //***************************************************************
             //  [UPDATE_MANAGE]    -time-
             //***************************************************************
-            timer.Update(gameTime);
-
             base.Update(gameTime);
         }
 
@@ -133,11 +140,10 @@ namespace deminage_bombe
             //***************************************************************
             //  [DRAW_MANAGE]      -font-
             //***************************************************************
-            spriteBatch.DrawString(FONTnewGame.font, FONTnewGame.texte, FONTnewGame.position, Color.Black);
-            spriteBatch.DrawString(FONThover.font, FONThover.texte, FONThover.position, Color.Black);
-            spriteBatch.DrawString(FONTclick.font, FONTclick.texte, FONTclick.position, Color.Black);
-            spriteBatch.DrawString(FONTclickRelease.font, FONTclickRelease.texte, FONTclickRelease.position, Color.Black);
-            spriteBatch.DrawString(FONTtimeDisplay.font, FONTtimeDisplay.texte, FONTtimeDisplay.position, Color.Black);
+            //spriteBatch.DrawString(FONTnewGame.font, FONTnewGame.texte, FONTnewGame.position, Color.Black);
+            //spriteBatch.DrawString(FONThover.font, FONThover.texte, FONThover.position, Color.Black);
+            //spriteBatch.DrawString(FONTclick.font, FONTclick.texte, FONTclick.position, Color.Black);
+            //spriteBatch.DrawString(FONTclickRelease.font, FONTclickRelease.texte, FONTclickRelease.position, Color.Black);
             base.Draw(spriteBatch);
         }
 

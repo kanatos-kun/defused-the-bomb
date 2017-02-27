@@ -7,12 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace deminage_bombe
+namespace defused_the_bomb
 {
     public class GameManager
     {
-        public string changeScreen;
-        public string state;
+        public string transition;
+        public string scene;
 
         private ContentManager content;
 

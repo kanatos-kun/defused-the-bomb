@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace deminage_bombe
+namespace defused_the_bomb
 {
     public class GuiButton : spriteManager
     {
@@ -59,6 +59,8 @@ namespace deminage_bombe
         public void update(GameTime gameTime)
         {
             hover();
+            click();
+            clickRelease();
             timer.Update(gameTime);
         }
 

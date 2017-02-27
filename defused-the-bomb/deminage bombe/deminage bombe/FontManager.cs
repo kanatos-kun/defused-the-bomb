@@ -7,13 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace deminage_bombe
+namespace defused_the_bomb
 {
     class fontManager
     {
         private static fontManager instance;
         public ContentManager Content { get; set; }
-        public SpriteFont[] TblFont = new SpriteFont[1];
+        public SpriteFont[] TblFont = new SpriteFont[2];
         public SpriteFont font;
         public Vector2 position;
         public string texte;
@@ -45,6 +45,7 @@ namespace deminage_bombe
         {
             this.Content = new ContentManager(Content.ServiceProvider, "Content");
             TblFont[0] = Content.Load<SpriteFont>("font/arial");
+            TblFont[1] = Content.Load<SpriteFont>("font/digital");
         }
 
         public void unloadContent()

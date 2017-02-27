@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>I:/Document/Fichier/Programmation/projet/Framework/__monogame/Deminage bombe/__application/ver3/deminage bombe/deminage bombe/Content/image/module/module_wire/wire_black.png</SourceFile>
-  <SourceTime>2017-02-21T20:18:52+01:00</SourceTime>
-  <DestFile>I:/Document/Fichier/Programmation/projet/Framework/__monogame/Deminage bombe/__application/ver3/deminage bombe/deminage bombe/Content/bin/Windows/image/module/module_wire/wire_black.xnb</DestFile>
-  <DestTime>2017-02-23T09:10:50.8784136+01:00</DestTime>
+  <SourceFile>I:/Document/Fichier/Programmation/projet/Framework/__monogame/Deminage bombe/__application/ver4/deminage bombe/deminage bombe/Content/image/module/module_wire/wire_black.png</SourceFile>
+  <SourceTime>2017-02-26T15:28:56.0725179+01:00</SourceTime>
+  <DestFile>I:/Document/Fichier/Programmation/projet/Framework/__monogame/Deminage bombe/__application/ver4/deminage bombe/deminage bombe/Content/bin/Windows/image/module/module_wire/wire_black.xnb</DestFile>
+  <DestTime>2017-02-26T17:32:11.6995332+01:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2016-03-30T08:36:08+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

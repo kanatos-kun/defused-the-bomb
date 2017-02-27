@@ -7,34 +7,61 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace deminage_bombe
+namespace defused_the_bomb
 {
 
     class GameScreen : GameManager
     {
-        spriteManager background_image;
-        spriteManager module;
+        GameTimer COUNTERbomb;
 
-        GuiButton wire_01;
-        GuiButton wire_02;
-        GuiButton wire_03;
-        GuiButton wire_04;
-        GuiButton wire_05;
-        GuiButton wire_06;
+        spriteManager IMGbackground;
+        spriteManager IMGmoduleWire;
+        spriteManager IMGmoduleBomb;
+        spriteManager IMGmalette;
+
+        fontManager STRINGtimer;
+
+        GuiButton GUIwire01;
+        GuiButton GUIwire02;
+        GuiButton GUIwire03;
+        GuiButton GUIwire04;
+
+        GuiButton GUIarrowRight;
+        GuiButton GUIarrowLeft;
+        GuiButton GUIarrowUp;
+        GuiButton GUIarrowDown;
+
 
         public override void ContentLoad(ContentManager Content)
         {
-            state = "gameScreen";
+            scene = "gameScreen";
 
-            background_image = new spriteManager(0,Vector2.Zero,Content);
-            module = new spriteManager(9, new Vector2(187, 200), Content);
+            COUNTERbomb = new GameTimer(((1000) * 60) * 5);
 
-            wire_01 = new GuiButton(20, new Vector2(209, 218), Content);
-            wire_02 = new GuiButton(18, new Vector2(238, 218), Content);
-            wire_03 = new GuiButton(16, new Vector2(266, 218), Content);
-            wire_04 = new GuiButton(14, new Vector2(294, 218), Content);
-            wire_05 = new GuiButton(12, new Vector2(322, 218), Content);
-            wire_06 = new GuiButton(10, new Vector2(350, 218), Content);
+            IMGbackground = new spriteManager(0,Vector2.Zero,Content);
+            IMGmoduleWire = new spriteManager(9, new Vector2(234, 251), Content);
+            IMGmoduleBomb = new spriteManager(24, new Vector2(394,251), Content);
+            IMGmalette = new spriteManager(5,Vector2.Zero, Content);
+
+
+            STRINGtimer = new fontManager(1,
+            "0"+COUNTERbomb.CountMin+":"+"0"+COUNTERbomb.CountSec,
+            new Vector2(437,276),Content);
+
+            GUIwire01 = new GuiButton(20, new Vector2(244, 275), Content);
+            GUIwire02 = new GuiButton(18, new Vector2(284, 275), Content);
+            GUIwire03 = new GuiButton(16, new Vector2(324, 275), Content);
+            GUIwire04 = new GuiButton(14, new Vector2(364, 275), Content);
+            GUIarrowRight = new GuiButton(7, new Vector2(792,334), Content);
+            GUIarrowRight.position += new Vector2(GUIarrowRight.image.Width / 2, GUIarrowRight.image.Height / 2);
+            GUIarrowLeft = new GuiButton(7, new Vector2(116, 334), Content);
+            GUIarrowLeft.position += new Vector2(GUIarrowLeft.image.Width / 2, GUIarrowLeft.image.Height / 2);
+            GUIarrowUp = new GuiButton(7, new Vector2(438, 139), Content);
+            GUIarrowUp.position += new Vector2(GUIarrowUp.image.Height / 2, GUIarrowUp.image.Width / 2);
+            GUIarrowDown = new GuiButton(7, new Vector2(438, 556), Content);
+            GUIarrowDown.position += new Vector2(GUIarrowDown.image.Height / 2, GUIarrowDown.image.Width / 2);
+
+            COUNTERbomb.Start();
             base.ContentLoad(Content);
         }
 
@@ -55,32 +82,72 @@ namespace deminage_bombe
 
         public override void Update(GameTime gameTime)
         {
-            if (wire_01.click())
-                wire_01.image = spriteManager.Instance.Tblimage[21];
-            if (wire_02.click())
-                wire_02.image = spriteManager.Instance.Tblimage[19];
-            if (wire_03.click())
-                wire_03.image = spriteManager.Instance.Tblimage[17];
-            if (wire_04.click())
-                wire_04.image = spriteManager.Instance.Tblimage[15];
-            if (wire_05.click())
-                wire_05.image = spriteManager.Instance.Tblimage[13];
-            if (wire_06.click())
-                wire_06.image = spriteManager.Instance.Tblimage[11];
+
+            COUNTERbomb.Update(gameTime);
+
+            if (COUNTERbomb.CountMin>9 && COUNTERbomb.CountSec > 9)
+                STRINGtimer.texte = (int)COUNTERbomb.CountMin + ":" + (int)COUNTERbomb.CountSec;
+            else if (COUNTERbomb.CountMin>9)
+                STRINGtimer.texte = (int)COUNTERbomb.CountMin + ":" + "0" + (int)COUNTERbomb.CountSec;
+            else if (COUNTERbomb.CountSec > 9)
+                STRINGtimer.texte = "0" + (int)COUNTERbomb.CountMin + ":" + (int)COUNTERbomb.CountSec;
+            else
+                STRINGtimer.texte = "0" + (int)COUNTERbomb.CountMin + ":" + "0" + (int)COUNTERbomb.CountSec;
+
+            //Module wire
+            //-----------------------------------------------------------------
+            GUIwire01.update(gameTime);
+            GUIwire02.update(gameTime);
+            GUIwire03.update(gameTime);
+            GUIwire04.update(gameTime);
+
+
+            if (GUIwire02.timer.stop)
+                transition = "GameOverScreen";
+            if (GUIwire03.timer.stop)
+                transition = "GameWinScreen";
+
+
+            if (GUIwire01.click())
+            {
+                GUIwire01.image = spriteManager.Instance.Tblimage[21];
+            }
+            if (GUIwire02.click())
+            {
+                GUIwire02.image = spriteManager.Instance.Tblimage[19];
+            }
+            if (GUIwire03.click())
+            {
+                GUIwire03.image = spriteManager.Instance.Tblimage[17];
+            }
+            if (GUIwire04.click())
+            {
+                GUIwire04.image = spriteManager.Instance.Tblimage[15];
+            }
+            //-----------------------------------------------------------------
+
             base.Update(gameTime);
         }
 
         public override void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(background_image.image,background_image.position,Color.White);
-            spriteBatch.Draw(module.image, module.position, Color.White);
+            spriteBatch.Draw(IMGbackground.image,IMGbackground.position,Color.White);
 
-            spriteBatch.Draw(wire_01.image, wire_01.position, Color.White);
-            spriteBatch.Draw(wire_02.image, wire_02.position, Color.White);
-            spriteBatch.Draw(wire_03.image, wire_03.position, Color.White);
-            spriteBatch.Draw(wire_04.image, wire_04.position, Color.White);
-            spriteBatch.Draw(wire_05.image, wire_05.position, Color.White);
-            spriteBatch.Draw(wire_06.image, wire_06.position, Color.White);
+            spriteBatch.Draw(IMGmalette.image, IMGmalette.position, Color.White);
+            spriteBatch.Draw(IMGmoduleWire.image, IMGmoduleWire.position, Color.White);
+            spriteBatch.Draw(IMGmoduleBomb.image, IMGmoduleBomb.position, Color.White);
+
+            spriteBatch.Draw(GUIwire01.image, GUIwire01.position, Color.White);
+            spriteBatch.Draw(GUIwire02.image, GUIwire02.position, Color.White);
+            spriteBatch.Draw(GUIwire03.image, GUIwire03.position, Color.White);
+            spriteBatch.Draw(GUIwire04.image, GUIwire04.position, Color.White);
+            spriteBatch.Draw(GUIarrowLeft.image, GUIarrowLeft.position,null,Color.White,0,new Vector2(GUIarrowLeft.image.Width/2,GUIarrowLeft.image.Height/2),
+                1,SpriteEffects.None,0);
+            spriteBatch.Draw(GUIarrowRight.image, GUIarrowRight.position, null, Color.White, MathHelper.Pi, new Vector2(GUIarrowRight.image.Width / 2, GUIarrowRight.image.Height / 2), 1, SpriteEffects.None, 0);
+            spriteBatch.Draw(GUIarrowUp.image, GUIarrowUp.position, null, Color.White, MathHelper.PiOver2, new Vector2(GUIarrowUp.image.Width / 2, GUIarrowRight.image.Height / 2), 1, SpriteEffects.None, 0);
+            spriteBatch.Draw(GUIarrowDown.image, GUIarrowDown.position, null, Color.White, MathHelper.PiOver2*3, new Vector2(GUIarrowDown.image.Width / 2, GUIarrowDown.image.Height / 2), 1, SpriteEffects.None, 0);
+
+            spriteBatch.DrawString(STRINGtimer.font, STRINGtimer.texte, STRINGtimer.position,new Color(46,50,51));
 
             base.Draw(spriteBatch);
         }

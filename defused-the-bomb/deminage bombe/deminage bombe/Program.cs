@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace deminage_bombe
+namespace defused_the_bomb
 {
 #if WINDOWS || LINUX
     /// <summary>
