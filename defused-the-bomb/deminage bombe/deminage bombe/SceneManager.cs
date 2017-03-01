@@ -9,9 +9,8 @@ namespace defused_the_bomb
 {
     public class SceneManager
     {
-        int transition = 0;
-        public GameManager scene;
-        GameManager[] TblScene = new GameManager[4];
+        public GameManager scene { private set; get; }
+        GameManager[] TblScene = new GameManager[9];
         ContentManager Content;
 
         public void ContentLoad(ContentManager Content)
@@ -19,11 +18,11 @@ namespace defused_the_bomb
             this.Content = new ContentManager(Content.ServiceProvider, "Content");
             TblScene[0] = new TitleScreen();
             TblScene[0].ContentLoad(Content);
-            TblScene[1] = new GameScreen();
+            TblScene[1] = new GameOverScreen();
             TblScene[1].ContentLoad(Content);
-            TblScene[2] = new GameOverScreen();
+            TblScene[2] = new GameWinScreen();
             TblScene[2].ContentLoad(Content);
-            TblScene[3] = new GameWinScreen();
+            TblScene[3] = new GameScreen();
             TblScene[3].ContentLoad(Content);
             scene = TblScene[0];
         }
@@ -36,16 +35,16 @@ namespace defused_the_bomb
                     Console.WriteLine("la scene actuelle est \"TitleScreen\"");
                     scene = TblScene[0];
                     break;
-                case "GameScreen":
-                    Console.WriteLine("la scene actuelle est \"GameScreen\"");
-                    scene = TblScene[1];
-                    break;
                 case "GameOverScreen":
                     Console.WriteLine("la scene actuelle est \"GameOverScreen\"");
-                    scene = TblScene[2];
+                    scene = TblScene[1];
                     break;
                 case "GameWinScreen":
                     Console.WriteLine("la scene actuelle est \"GameWinScreen\"");
+                    scene = TblScene[2];
+                    break;
+                case "gameScreen":
+                    Console.WriteLine("la scene actuelle est \"gameScreen\"");
                     scene = TblScene[3];
                     break;
                 default:

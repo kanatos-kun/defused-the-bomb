@@ -36,6 +36,10 @@ namespace defused_the_bomb
 
         private void Stop()
         {
+            msec = 0;
+            sec = 0;
+            min = 0;
+            totalTime = 0;
             stop = true;
             start = false;
             Console.WriteLine("Le timer est terminé!");
@@ -43,6 +47,9 @@ namespace defused_the_bomb
 
         public void Update(GameTime gameTime)
         {
+            if (stop)
+              stop = false;
+
             time = gameTime;
             if (start)
             {
@@ -58,7 +65,6 @@ namespace defused_the_bomb
                 }
 
                 CountMsec -= time.ElapsedGameTime.TotalMilliseconds;
-
                 if (CountMsec < 0)
                 { 
                     CountMsec = 1000;
@@ -69,12 +75,9 @@ namespace defused_the_bomb
                     CountSec = 59;
                     CountMin--;
                 }
-
-            if (min > 60)
-            min = 0;
-                //Console.WriteLine("milliseconde : " + msec + " seconde : " + sec + " minute : " + min);
+                if (min > 60)
+                min = 0;
             }
-
 
             if (totalTime > elapsed && !stop)
                 Stop();

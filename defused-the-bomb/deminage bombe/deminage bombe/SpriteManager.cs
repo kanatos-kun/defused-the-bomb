@@ -11,12 +11,13 @@ namespace defused_the_bomb
 {
     public class spriteManager
     {
-        public Texture2D[] Tblimage = new Texture2D[31];
+        public Texture2D[] Tblimage = new Texture2D[33];
         public SpriteFont font;
         public ContentManager Content { private set; get; }
         public Texture2D image;
         public Vector2 position;
         public Vector2 size;
+        public Vector2 origin;
         private static spriteManager instance;
 
         public static spriteManager Instance
@@ -34,6 +35,7 @@ namespace defused_the_bomb
             this.LoadContent(Content);
             image = Tblimage[pNumber];
             position = pPosition;
+            origin = Vector2.Zero;
             //size = new Vector2(Tblimage[pNumber].Width, Tblimage[pNumber].Height);
         }
 
@@ -41,6 +43,7 @@ namespace defused_the_bomb
         {
             image = null;
             position = Vector2.Zero;
+            origin = Vector2.Zero;
         }
 
         public void LoadContent(ContentManager Content)
@@ -75,8 +78,8 @@ namespace defused_the_bomb
             Tblimage[22] = Content.Load<Texture2D>("image/GUI/new_game_inactive");
             Tblimage[23] = Content.Load<Texture2D>("image/GUI/quit_inactive");
 
-            //module bomb
-            Tblimage[24] = Content.Load<Texture2D>("image/module/module_bomb/module_bomb");
+            //module timer
+            Tblimage[24] = Content.Load<Texture2D>("image/module/module_bomb/timer");
 
             //gameover et win
             Tblimage[25] = Content.Load<Texture2D>("image/game_over");
@@ -89,6 +92,10 @@ namespace defused_the_bomb
             //gui button hover
             Tblimage[29] = Content.Load<Texture2D>("image/GUI/new_game_hover");
             Tblimage[30] = Content.Load<Texture2D>("image/GUI/quit_hover");
+
+            //vie
+            Tblimage[31] = Content.Load<Texture2D>("image/life");
+            Tblimage[32] = Content.Load<Texture2D>("image/life_out");
 
         }
 

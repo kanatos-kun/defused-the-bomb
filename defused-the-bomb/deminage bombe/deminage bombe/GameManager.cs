@@ -14,12 +14,9 @@ namespace defused_the_bomb
         public string transition;
         public string scene;
 
-        private ContentManager content;
-
-
         public virtual void ContentLoad(ContentManager Content)
         {
-            content = new ContentManager(ScreenManager.Instance.Content.ServiceProvider, "Content");
+
         }
 
         public virtual void UnloadContent()
