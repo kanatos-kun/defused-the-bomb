@@ -11,7 +11,7 @@ namespace defused_the_bomb
 {
     public class spriteManager
     {
-        public Texture2D[] Tblimage = new Texture2D[33];
+        public Texture2D[] Tblimage = new Texture2D[89];
         public SpriteFont font;
         public ContentManager Content { private set; get; }
         public Texture2D image;
@@ -96,6 +96,82 @@ namespace defused_the_bomb
             //vie
             Tblimage[31] = Content.Load<Texture2D>("image/life");
             Tblimage[32] = Content.Load<Texture2D>("image/life_out");
+            Tblimage[33] = Content.Load<Texture2D>("image/module/module_end");
+            Tblimage[34] = Content.Load<Texture2D>("image/module/module_end_reussi");
+
+            // module nombre
+            Tblimage[35] = Content.Load<Texture2D>("image/module/module_nombre/00_active");
+            Tblimage[36] = Content.Load<Texture2D>("image/module/module_nombre/00_inactive");
+            Tblimage[37] = Content.Load<Texture2D>("image/module/module_nombre/00_hover");
+
+            Tblimage[38] = Content.Load<Texture2D>("image/module/module_nombre/01_active");
+            Tblimage[39] = Content.Load<Texture2D>("image/module/module_nombre/01_inactive");
+            Tblimage[40] = Content.Load<Texture2D>("image/module/module_nombre/01_hover");
+
+            Tblimage[41] = Content.Load<Texture2D>("image/module/module_nombre/02_active");
+            Tblimage[42] = Content.Load<Texture2D>("image/module/module_nombre/02_inactive");
+            Tblimage[43] = Content.Load<Texture2D>("image/module/module_nombre/02_hover");
+
+            Tblimage[44] = Content.Load<Texture2D>("image/module/module_nombre/03_active");
+            Tblimage[45] = Content.Load<Texture2D>("image/module/module_nombre/03_inactive");
+            Tblimage[46] = Content.Load<Texture2D>("image/module/module_nombre/03_hover");
+
+            Tblimage[47] = Content.Load<Texture2D>("image/module/module_nombre/04_active");
+            Tblimage[48] = Content.Load<Texture2D>("image/module/module_nombre/04_inactive");
+            Tblimage[49] = Content.Load<Texture2D>("image/module/module_nombre/04_hover");
+
+            Tblimage[50] = Content.Load<Texture2D>("image/module/module_nombre/05_active");
+            Tblimage[51] = Content.Load<Texture2D>("image/module/module_nombre/05_inactive");
+            Tblimage[52] = Content.Load<Texture2D>("image/module/module_nombre/05_hover");
+
+            Tblimage[53] = Content.Load<Texture2D>("image/module/module_nombre/06_active");
+            Tblimage[54] = Content.Load<Texture2D>("image/module/module_nombre/06_inactive");
+            Tblimage[55] = Content.Load<Texture2D>("image/module/module_nombre/06_hover");
+
+            Tblimage[56] = Content.Load<Texture2D>("image/module/module_nombre/07_active");
+            Tblimage[57] = Content.Load<Texture2D>("image/module/module_nombre/07_inactive");
+            Tblimage[58] = Content.Load<Texture2D>("image/module/module_nombre/07_hover");
+
+            Tblimage[59] = Content.Load<Texture2D>("image/module/module_nombre/08_active");
+            Tblimage[60] = Content.Load<Texture2D>("image/module/module_nombre/08_inactive");
+            Tblimage[61] = Content.Load<Texture2D>("image/module/module_nombre/08_hover");
+
+            Tblimage[62] = Content.Load<Texture2D>("image/module/module_nombre/09_active");
+            Tblimage[63] = Content.Load<Texture2D>("image/module/module_nombre/09_inactive");
+            Tblimage[64] = Content.Load<Texture2D>("image/module/module_nombre/09_hover");
+
+            //module forme
+            Tblimage[65] = Content.Load<Texture2D>("image/module/module_forme/element_blue_diamond");
+            Tblimage[66] = Content.Load<Texture2D>("image/module/module_forme/element_green_square");
+            Tblimage[67] = Content.Load<Texture2D>("image/module/module_forme/element_purple_cube_glossy");
+            Tblimage[68] = Content.Load<Texture2D>("image/module/module_forme/element_purple_diamond");
+            Tblimage[69] = Content.Load<Texture2D>("image/module/module_forme/element_red_square");
+            Tblimage[70] = Content.Load<Texture2D>("image/module/module_forme/element_yellow_diamond");
+
+            //module animaux
+            Tblimage[71] = Content.Load<Texture2D>("image/module/module_animaux/cochon_active");
+            Tblimage[72] = Content.Load<Texture2D>("image/module/module_animaux/cochon_inactive");
+            Tblimage[73] = Content.Load<Texture2D>("image/module/module_animaux/cochon_hover");
+
+            Tblimage[74] = Content.Load<Texture2D>("image/module/module_animaux/lapin_active");
+            Tblimage[75] = Content.Load<Texture2D>("image/module/module_animaux/lapin_inactive");
+            Tblimage[76] = Content.Load<Texture2D>("image/module/module_animaux/lapin_hover");
+
+            Tblimage[77] = Content.Load<Texture2D>("image/module/module_animaux/vache_active");
+            Tblimage[78] = Content.Load<Texture2D>("image/module/module_animaux/vache_inactive");
+            Tblimage[79] = Content.Load<Texture2D>("image/module/module_animaux/vache_hover");
+
+            Tblimage[80] = Content.Load<Texture2D>("image/module/module_animaux/lion_active");
+            Tblimage[81] = Content.Load<Texture2D>("image/module/module_animaux/lion_inactive");
+            Tblimage[82] = Content.Load<Texture2D>("image/module/module_animaux/lion_hover");
+
+            Tblimage[83] = Content.Load<Texture2D>("image/module/module_animaux/rinoceros_active");
+            Tblimage[84] = Content.Load<Texture2D>("image/module/module_animaux/rinoceros_inactive");
+            Tblimage[85] = Content.Load<Texture2D>("image/module/module_animaux/rinoceros_hover");
+
+            Tblimage[86] = Content.Load<Texture2D>("image/module/module_animaux/singe_active");
+            Tblimage[87] = Content.Load<Texture2D>("image/module/module_animaux/singe_inactive");
+            Tblimage[88] = Content.Load<Texture2D>("image/module/module_animaux/singe_hover");
 
         }
 

@@ -19,35 +19,47 @@ namespace defused_the_bomb
         private bool inversed = false;
         public string state;
         public bool repeat { get; private set; } = true;
+        protected spriteManager IMGactive = new spriteManager();
+        protected spriteManager IMGhover = new spriteManager();
+        protected spriteManager IMGinactive = new spriteManager();
 
         public GameTimer timer = new GameTimer(2000);
 
-        public GuiButton(string pState,int pImage, Vector2 pPosition, ContentManager Content)
+        public GuiButton(string pState,int pInactive,int pHover,int pActive, Vector2 pPosition, ContentManager Content)
         {
             this.LoadContent(Content);
             state = pState;
-            image = Tblimage[pImage];
+            IMGinactive.image = Tblimage[pInactive];
+            IMGactive.image = Tblimage[pActive];
+            IMGhover.image = Tblimage[pHover];
+            image = Tblimage[pInactive];
             position = pPosition;
             //size = new Vector2(Tblimage[pImage].Width, Tblimage[pImage].Height);
         }
 
-        public GuiButton(string pState,double pElapsedTime,int pImage, Vector2 pPosition, ContentManager Content)
+        public GuiButton(string pState,double pElapsedTime, int pInactive, int pHover, int pActive, Vector2 pPosition, ContentManager Content)
         {
             this.LoadContent(Content);
             state = pState;
             timer.elapsed = pElapsedTime;
-            image = Tblimage[pImage];
+            IMGinactive.image = Tblimage[pInactive];
+            IMGactive.image = Tblimage[pActive];
+            IMGhover.image = Tblimage[pHover];
+            image = Tblimage[pInactive];
             position = pPosition;
             //size = new Vector2(Tblimage[pImage].Width, Tblimage[pImage].Height);
         }
 
-        public GuiButton(string pState,bool pInversed,double pElapsedTime, int pImage, Vector2 pPosition, ContentManager Content)
+        public GuiButton(string pState,bool pInversed,double pElapsedTime, int pInactive, int pHover, int pActive, Vector2 pPosition, ContentManager Content)
         {
             this.LoadContent(Content);
             state = pState;
             inversed = pInversed;
             timer.elapsed = pElapsedTime;
-            image = Tblimage[pImage];
+            IMGinactive.image = Tblimage[pInactive];
+            IMGactive.image = Tblimage[pActive];
+            IMGhover.image = Tblimage[pHover];
+            image = Tblimage[pInactive];
             position = pPosition;
             //size = new Vector2(Tblimage[pImage].Width, Tblimage[pImage].Height);
         }
@@ -59,13 +71,19 @@ namespace defused_the_bomb
             bool hover_y = false;
             mouse = Mouse.GetState();
 
+           image = IMGinactive.image;
+
             if (inversed)
             {
                 if (mouse.X > position.X - origin.Y && mouse.X < position.X + image.Width - origin.Y)
                     hover_x = true;
                 if (mouse.Y > position.Y - origin.X && mouse.Y < position.Y + image.Height - origin.X)
                     hover_y = true;
-                if (hover_x && hover_y) hover = true;
+                if (hover_x && hover_y)
+                {
+                    image = IMGhover.image;
+                    hover = true;
+                }
             }
             else
             { 
@@ -73,9 +91,15 @@ namespace defused_the_bomb
                     hover_x = true;
                 if (mouse.Y > position.Y - origin.Y && mouse.Y  < position.Y + image.Height - origin.Y)
                     hover_y = true;
-                if (hover_x && hover_y) hover = true;
+                if (hover_x && hover_y)
+                {
+                    image = IMGhover.image;
+                    hover = true;
+                }
             }
 
+            if (!repeat)
+                image = IMGactive.image;
 
             return hover;
         }
@@ -87,7 +111,6 @@ namespace defused_the_bomb
             {
                 release = true;
                 timer.Start();
-
                 oldMousePressed = false;
                 newMousePressed = false;
             }
@@ -96,9 +119,10 @@ namespace defused_the_bomb
 
         public void update(GameTime gameTime)
         {
-            hover();
-            click();
             clickRelease();
+            if (!timer.start)
+                hover();
+            click();
 
             if (timer.stop && state == "once")
                 repeat = false;
@@ -115,6 +139,7 @@ namespace defused_the_bomb
             { 
                 if (ButtonState.Pressed == mouse.LeftButton && hover())
                 {
+                    image = IMGactive.image;
                     click = true;
                     newMousePressed = true;
                 }

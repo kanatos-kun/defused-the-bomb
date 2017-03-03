@@ -32,8 +32,8 @@ namespace defused_the_bomb
 
             IMGbackground = new spriteManager(8, Vector2.Zero, Content);
 
-            GUInewGame = new GuiButton("repeat",100,22, new Vector2(230, 353), Content);
-            GUIquit = new GuiButton("repeat", 100, 23, new Vector2(230, 492), Content);
+            GUInewGame = new GuiButton("repeat",100,22,29,27, new Vector2(230, 353), Content);
+            GUIquit = new GuiButton("repeat", 100, 23,30,28, new Vector2(230, 492), Content);
 
             FONTquit = new fontManager(0,
                                             "position mouseX : "         + mouse.X+
@@ -73,24 +73,8 @@ namespace defused_the_bomb
             FONTclick.texte = ("Click : " + GUIquit.click());
             FONTclickRelease.texte = ("ClickRelease : " + GUIquit.clickRelease());
 
-            if (GUInewGame.hover() && GUInewGame.click())
-                GUInewGame.image = spriteManager.Instance.Tblimage[27];
-            else if (GUInewGame.hover())
-                GUInewGame.image = spriteManager.Instance.Tblimage[29];
-            else
-                GUInewGame.image = spriteManager.Instance.Tblimage[22];
-
-            if (GUIquit.hover() && GUIquit.click())
-                GUIquit.image = spriteManager.Instance.Tblimage[28];
-            else if (GUIquit.hover())
-                GUIquit.image = spriteManager.Instance.Tblimage[30];
-            else
-                GUIquit.image = spriteManager.Instance.Tblimage[23];
-
             if (GUInewGame.timer.stop)
-            {
                 transition = "gameScreen";
-            }
 
             base.Update(gameTime);
         }
