@@ -42,9 +42,17 @@
     <Compile Include="GameManager.cs" />
     <Compile Include="GameOverScreen.cs" />
     <Compile Include="GameScreen.cs" />
+    <Compile Include="GameState.cs" />
     <Compile Include="GameTimer.cs" />
     <Compile Include="GuiButton.cs" />
     <Compile Include="fontManager.cs" />
+    <Compile Include="Malette.cs" />
+    <Compile Include="MaletteDessous.cs" />
+    <Compile Include="MaletteDessus.cs" />
+    <Compile Include="MaletteGauche.cs" />
+    <Compile Include="MaletteDroite.cs" />
+    <Compile Include="MaletteArriere.cs" />
+    <Compile Include="MaletteFace.cs" />
     <Compile Include="SceneManager.cs" />
     <Compile Include="SpriteManager.cs" />
     <Compile Include="Program.cs" />

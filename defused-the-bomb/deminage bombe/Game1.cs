@@ -29,7 +29,7 @@ namespace defused_the_bomb
             // TODO: Add your initialization logic here
             graphics.PreferredBackBufferWidth = (int)ScreenManager.Instance.Dimensions.X;
             graphics.PreferredBackBufferHeight =(int)ScreenManager.Instance.Dimensions.Y;
-            IsMouseVisible = true;
+            IsMouseVisible = false;
             graphics.ApplyChanges();
 
             base.Initialize();

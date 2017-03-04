@@ -17,7 +17,7 @@ namespace defused_the_bomb
         GuiButton GUInewGame;
         GuiButton GUIquit;
 
-        fontManager FONTnewGame;
+        fontManager FONTquit;
         fontManager FONThover;
         fontManager FONTclick;
         fontManager FONTclickRelease;
@@ -28,37 +28,20 @@ namespace defused_the_bomb
 
         public override void ContentLoad(ContentManager Content)
         {
-            //***************************************************************
-            //  [CONTENT_MANAGE]   -state,timer-
-            //***************************************************************
-
             scene = "titleScreen";
-
-            //***************************************************************
-            //  [CONTENT_MANAGE]        -image-
-            //***************************************************************
 
             IMGbackground = new spriteManager(8, Vector2.Zero, Content);
 
-            //***************************************************************
-            //  [CONTENT_MANAGE]        -gui-
-            //***************************************************************
+            GUInewGame = new GuiButton("repeat",100,22,29,27, new Vector2(230, 353), Content);
+            GUIquit = new GuiButton("repeat", 100, 23,30,28, new Vector2(230, 492), Content);
 
-            GUInewGame = new GuiButton(22, new Vector2(277, 353), Content);
-            GUInewGame.timer.elapsed = 500;
-            GUIquit = new GuiButton(23, new Vector2(277, 492), Content);
-
-            //***************************************************************
-            //  [CONTENT_MANAGE]       -font-
-            //***************************************************************
-
-            FONTnewGame = new fontManager(0,
+            FONTquit = new fontManager(0,
                                             "position mouseX : "         + mouse.X+
                                             " \n" + "position mouseY : " + mouse.Y+
                                             "",Vector2.Zero, Content);
-            FONThover = new fontManager(0, "Hover : " + GUInewGame.hover(), new Vector2(0, 45), Content);
-            FONTclick = new fontManager(0, "Click : " + GUInewGame.click(), new Vector2(0, 65), Content);
-            FONTclickRelease = new fontManager(0, "ClickRelease : " + GUInewGame.clickRelease(), new Vector2(0, 85), Content);
+            FONThover = new fontManager(0, "Hover : " + GUIquit.hover(), new Vector2(0, 45), Content);
+            FONTclick = new fontManager(0, "Click : " + GUIquit.click(), new Vector2(0, 65), Content);
+            FONTclickRelease = new fontManager(0, "ClickRelease : " + GUIquit.clickRelease(), new Vector2(0, 85), Content);
 
             base.ContentLoad(Content);
         }
@@ -80,50 +63,31 @@ namespace defused_the_bomb
 
         public override void Update(GameTime gameTime)
         {
-            //***************************************************************
-            //  [UPDATE_MANAGE]    -mouse-
-            //***************************************************************
+            GUIquit.update(gameTime);
+            GUInewGame.update(gameTime);
 
             mouse = Mouse.GetState();
 
-            //***************************************************************
-            //  [UPDATE_MANAGE]    -font-
-            //***************************************************************
+            FONTquit.texte = ("position mouseX : " + mouse.X + " \n" + "position mouseY : " + mouse.Y + "");
+            FONThover.texte = ("Hover : " + GUIquit.hover());
+            FONTclick.texte = ("Click : " + GUIquit.click());
+            FONTclickRelease.texte = ("ClickRelease : " + GUIquit.clickRelease());
 
-            FONTnewGame.texte = ("position mouseX : " + mouse.X + " \n" + "position mouseY : " + mouse.Y + "");
-            FONThover.texte = ("Hover : " + GUInewGame.hover());
-            FONTclick.texte = ("Click : " + GUInewGame.click());
-            FONTclickRelease.texte = ("ClickRelease : " + GUInewGame.clickRelease());
-
-            //***************************************************************
-            //  [UPDATE_MANAGE]    -gui-
-            //***************************************************************
-
-            GUInewGame.update(gameTime);
             if (GUInewGame.timer.stop)
-                transition = "GameScreen";
+                transition = "gameScreen";
 
-            //***************************************************************
-            //  [UPDATE_MANAGE]    -time-
-            //***************************************************************
             base.Update(gameTime);
         }
 
         public override void Draw(SpriteBatch spriteBatch)
         {
-            //***************************************************************
-            //  [DRAW_MANAGE]     -image-
-            //***************************************************************
+
             spriteBatch.Draw(IMGbackground.image, IMGbackground.position, Color.White);
-            //***************************************************************
-            //  [DRAW_MANAGE]      -gui-
-            //***************************************************************
+
             spriteBatch.Draw(GUInewGame.image, GUInewGame.position, Color.White);
             spriteBatch.Draw(GUIquit.image, GUIquit.position, Color.White);
-            //***************************************************************
-            //  [DRAW_MANAGE]      -font-
-            //***************************************************************
-            //spriteBatch.DrawString(FONTnewGame.font, FONTnewGame.texte, FONTnewGame.position, Color.Black);
+
+            //spriteBatch.DrawString(FONTquit.font, FONTquit.texte, FONTquit.position, Color.Black);
             //spriteBatch.DrawString(FONThover.font, FONThover.texte, FONThover.position, Color.Black);
             //spriteBatch.DrawString(FONTclick.font, FONTclick.texte, FONTclick.position, Color.Black);
             //spriteBatch.DrawString(FONTclickRelease.font, FONTclickRelease.texte, FONTclickRelease.position, Color.Black);
