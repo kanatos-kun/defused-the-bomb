@@ -9,13 +9,16 @@ using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
-namespace deminage_bombe
+namespace defused_the_bomb
 {
     public class ScreenManager
     {
         private static ScreenManager instance;
         public Vector2 Dimensions { private set; get; }
+
+        public SceneManager currentScene;
         public GameManager currentScreen;
+
         public KeyboardState oldState;
         public ContentManager Content { private set; get; }
 
@@ -33,14 +36,15 @@ namespace deminage_bombe
         public ScreenManager()
         {
             Dimensions = new Vector2(960,720);
-            currentScreen = new TitleScreen();
-
+            currentScene = new SceneManager();
         }
 
         public void ContentLoad(ContentManager Content)
         {
+
             this.Content = new ContentManager(Content.ServiceProvider, "Content");
-            currentScreen.ContentLoad(Content);
+            currentScene.ContentLoad(Content);
+            currentScreen = currentScene.scene;
             oldState = Keyboard.GetState();
         }
 
@@ -58,9 +62,15 @@ namespace deminage_bombe
             //else if (newState.IsKeyDown(Keys.A))
             //    currentScreen = new TitleScreen(Content);
 
-            if (currentScreen.changeScreen == "GameScreen" && currentScreen.state =="titleScreen")
-                currentScreen = new GameScreen(Content);
+            //if (currentScreen.transition == "GameScreen" && currentScreen.scene =="titleScreen")
+            //    currentScreen = new GameScreen(Content);
 
+            if (currentScreen.transition != null && currentScreen.transition != "")
+            {
+                currentScene.Transition(currentScreen.transition);
+                currentScreen.transition = null;
+            }
+            currentScreen = currentScene.scene;
             currentScreen.Update(gameTime);
         }
 
