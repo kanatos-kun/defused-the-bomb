@@ -30,10 +30,10 @@ namespace defused_the_bomb
             life[1] = false;
             life[2] = false;
 
-            GUIarrowRight = new GuiButton("repeat", false, 100, 7,7,7, new Vector2(792, 334), Content);
-            GUIarrowLeft = new GuiButton("repeat", false, 100, 7,7,7, new Vector2(116, 334), Content);
-            GUIarrowUp = new GuiButton("repeat", true, 100, 7,7,7, new Vector2(438, 139), Content);
-            GUIarrowDown = new GuiButton("repeat", true, 100, 7,7,7, new Vector2(438, 556), Content);
+            GUIarrowRight = new GuiButton("repeat", false, 100, 7,102,7, new Vector2(792, 334), Content);
+            GUIarrowLeft = new GuiButton("repeat", false, 100, 7,102,7, new Vector2(116, 334), Content);
+            GUIarrowUp = new GuiButton("repeat", true, 100, 7,102,7, new Vector2(438, 139), Content);
+            GUIarrowDown = new GuiButton("repeat", true, 100, 7,102,7, new Vector2(438, 556), Content);
 
             GUIarrowRight.origin = new Vector2(GUIarrowRight.image.Width / 2, GUIarrowRight.image.Height / 2);
             GUIarrowLeft.origin = new Vector2(GUIarrowLeft.image.Width / 2, GUIarrowLeft.image.Height / 2);

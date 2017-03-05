@@ -373,3 +373,4 @@ I:\Document\Fichier\Programmation\projet\Framework\__monogame\Deminage bombe\__a
 I:\Document\Fichier\Programmation\projet\Framework\__monogame\Deminage bombe\__application\ver7\deminage bombe\deminage bombe\bin\Windows\x86\Debug\Content\sons\bgm\fr4s - 8bit2.xnb
 I:\Document\Fichier\Programmation\projet\Framework\__monogame\Deminage bombe\__application\ver7\deminage bombe\deminage bombe\bin\Windows\x86\Debug\Content\sons\sfx\DM-CGS-01.xnb
 I:\Document\Fichier\Programmation\projet\Framework\__monogame\Deminage bombe\__application\ver7\deminage bombe\deminage bombe\bin\Windows\x86\Debug\Content\sons\sfx\DM-CGS-04.xnb
+I:\Document\Fichier\Programmation\projet\Framework\__monogame\Deminage bombe\__application\ver7\deminage bombe\deminage bombe\bin\Windows\x86\Debug\Content\image\double-left-arrows-angles_hover.xnb

@@ -11,7 +11,7 @@ namespace defused_the_bomb
 {
     public class spriteManager
     {
-        public Texture2D[] Tblimage = new Texture2D[102];
+        public Texture2D[] Tblimage = new Texture2D[103];
         public SpriteFont font;
         public ContentManager Content { private set; get; }
         public Texture2D image;
@@ -188,6 +188,8 @@ namespace defused_the_bomb
             Tblimage[100] = Content.Load<Texture2D>("image/module/module_forme/element_yellow_diamond_hover");
 
             Tblimage[101] = Content.Load<Texture2D>("image/mouse");
+            Tblimage[102] = Content.Load<Texture2D>("image/double-left-arrows-angles_hover");
+
         }
 
         public void unloadContent()
