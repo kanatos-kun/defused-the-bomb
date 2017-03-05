@@ -22,6 +22,7 @@ namespace defused_the_bomb
         public KeyboardState oldState;
         public ContentManager Content { private set; get; }
 
+        MouseState mouse;
 
         public static ScreenManager Instance
         {
@@ -56,6 +57,7 @@ namespace defused_the_bomb
         public void Update(GameTime gameTime)
         {
             KeyboardState newState = Keyboard.GetState();
+            mouse = Mouse.GetState();
 
             //if (newState.IsKeyDown(Keys.Space))
             //    currentScreen = new GameScreen(Content);
@@ -77,6 +79,8 @@ namespace defused_the_bomb
         public void  Draw(SpriteBatch spriteBatch)
         {
             currentScreen.Draw(spriteBatch);
+            spriteBatch.Draw(spriteManager.Instance.Tblimage[101], new Vector2(mouse.X, mouse.Y), Color.White);
+
         }
 
     }

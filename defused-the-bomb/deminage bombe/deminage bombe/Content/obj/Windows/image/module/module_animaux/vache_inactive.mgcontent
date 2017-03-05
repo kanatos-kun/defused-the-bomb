@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>I:/Document/Fichier/Programmation/projet/Framework/__monogame/Deminage bombe/__application/ver6/deminage bombe/deminage bombe/Content/image/module/module_animaux/vache_inactive.png</SourceFile>
+  <SourceFile>I:/Document/Fichier/Programmation/projet/Framework/__monogame/Deminage bombe/__application/ver7/deminage bombe/deminage bombe/Content/image/module/module_animaux/vache_inactive.png</SourceFile>
   <SourceTime>2017-03-02T20:51:49.3864647+01:00</SourceTime>
-  <DestFile>I:/Document/Fichier/Programmation/projet/Framework/__monogame/Deminage bombe/__application/ver6/deminage bombe/deminage bombe/Content/bin/Windows/image/module/module_animaux/vache_inactive.xnb</DestFile>
-  <DestTime>2017-03-02T21:01:55.4698285+01:00</DestTime>
+  <DestFile>I:/Document/Fichier/Programmation/projet/Framework/__monogame/Deminage bombe/__application/ver7/deminage bombe/deminage bombe/Content/bin/Windows/image/module/module_animaux/vache_inactive.xnb</DestFile>
+  <DestTime>2017-03-04T18:26:21.3805622+01:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2016-03-30T08:36:08+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

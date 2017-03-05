@@ -24,8 +24,6 @@ namespace defused_the_bomb
 
         MouseState mouse;
 
-
-
         public override void ContentLoad(ContentManager Content)
         {
             scene = "titleScreen";

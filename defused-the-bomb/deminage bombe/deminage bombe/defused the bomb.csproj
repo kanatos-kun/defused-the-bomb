@@ -53,6 +53,7 @@
     <Compile Include="MaletteDroite.cs" />
     <Compile Include="MaletteArriere.cs" />
     <Compile Include="MaletteFace.cs" />
+    <Compile Include="musicManager.cs" />
     <Compile Include="SceneManager.cs" />
     <Compile Include="SpriteManager.cs" />
     <Compile Include="Program.cs" />

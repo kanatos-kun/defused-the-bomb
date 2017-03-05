@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using Microsoft.Xna.Framework.Audio;
 
 namespace defused_the_bomb
 {
@@ -23,11 +24,16 @@ namespace defused_the_bomb
         protected spriteManager IMGhover = new spriteManager();
         protected spriteManager IMGinactive = new spriteManager();
 
+        private SoundEffect _sndClick;
+        private bool bool_sndClick = true;
+
         public GameTimer timer = new GameTimer(2000);
 
         public GuiButton(string pState,int pInactive,int pHover,int pActive, Vector2 pPosition, ContentManager Content)
         {
             this.LoadContent(Content);
+
+            _sndClick = musicManager.Instance.Tblsons[0];
             state = pState;
             IMGinactive.image = Tblimage[pInactive];
             IMGactive.image = Tblimage[pActive];
@@ -40,6 +46,8 @@ namespace defused_the_bomb
         public GuiButton(string pState,double pElapsedTime, int pInactive, int pHover, int pActive, Vector2 pPosition, ContentManager Content)
         {
             this.LoadContent(Content);
+
+            _sndClick = musicManager.Instance.Tblsons[0];
             state = pState;
             timer.elapsed = pElapsedTime;
             IMGinactive.image = Tblimage[pInactive];
@@ -53,6 +61,8 @@ namespace defused_the_bomb
         public GuiButton(string pState,bool pInversed,double pElapsedTime, int pInactive, int pHover, int pActive, Vector2 pPosition, ContentManager Content)
         {
             this.LoadContent(Content);
+
+            _sndClick = musicManager.Instance.Tblsons[0];
             state = pState;
             inversed = pInversed;
             timer.elapsed = pElapsedTime;
@@ -111,6 +121,7 @@ namespace defused_the_bomb
             {
                 release = true;
                 timer.Start();
+                bool_sndClick = true;
                 oldMousePressed = false;
                 newMousePressed = false;
             }
@@ -139,6 +150,11 @@ namespace defused_the_bomb
             { 
                 if (ButtonState.Pressed == mouse.LeftButton && hover())
                 {
+                    if (bool_sndClick)
+                    { 
+                    _sndClick.Play();
+                     bool_sndClick = false;
+                    }
                     image = IMGactive.image;
                     click = true;
                     newMousePressed = true;

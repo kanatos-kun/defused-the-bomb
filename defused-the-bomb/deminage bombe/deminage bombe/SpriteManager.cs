@@ -11,7 +11,7 @@ namespace defused_the_bomb
 {
     public class spriteManager
     {
-        public Texture2D[] Tblimage = new Texture2D[89];
+        public Texture2D[] Tblimage = new Texture2D[102];
         public SpriteFont font;
         public ContentManager Content { private set; get; }
         public Texture2D image;
@@ -173,6 +173,21 @@ namespace defused_the_bomb
             Tblimage[87] = Content.Load<Texture2D>("image/module/module_animaux/singe_inactive");
             Tblimage[88] = Content.Load<Texture2D>("image/module/module_animaux/singe_hover");
 
+            Tblimage[89] = Content.Load<Texture2D>("image/module/module_wire/wire_black_hover");
+            Tblimage[90] = Content.Load<Texture2D>("image/module/module_wire/wire_white_hover");
+            Tblimage[91] = Content.Load<Texture2D>("image/module/module_wire/wire_green_hover");
+            Tblimage[92] = Content.Load<Texture2D>("image/module/module_wire/wire_yellow_hover");
+            Tblimage[93] = Content.Load<Texture2D>("image/module/module_wire/wire_red_hover");
+            Tblimage[94] = Content.Load<Texture2D>("image/module/module_wire/wire_blue_hover");
+
+            Tblimage[95] = Content.Load<Texture2D>("image/module/module_forme/element_blue_diamond_hover");
+            Tblimage[96] = Content.Load<Texture2D>("image/module/module_forme/element_green_square_hover");
+            Tblimage[97] = Content.Load<Texture2D>("image/module/module_forme/element_purple_cube_glossy_hover");
+            Tblimage[98] = Content.Load<Texture2D>("image/module/module_forme/element_purple_diamond_hover");
+            Tblimage[99] = Content.Load<Texture2D>("image/module/module_forme/element_red_square_hover");
+            Tblimage[100] = Content.Load<Texture2D>("image/module/module_forme/element_yellow_diamond_hover");
+
+            Tblimage[101] = Content.Load<Texture2D>("image/mouse");
         }
 
         public void unloadContent()

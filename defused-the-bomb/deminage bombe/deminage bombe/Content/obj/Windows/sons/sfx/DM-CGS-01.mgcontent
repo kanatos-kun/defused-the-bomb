@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SourceFile>I:/Document/Fichier/Programmation/projet/Framework/__monogame/Deminage bombe/__application/ver7/deminage bombe/deminage bombe/Content/sons/sfx/DM-CGS-01.wav</SourceFile>
+  <SourceTime>2016-06-20T16:40:13+02:00</SourceTime>
+  <DestFile>I:/Document/Fichier/Programmation/projet/Framework/__monogame/Deminage bombe/__application/ver7/deminage bombe/deminage bombe/Content/bin/Windows/sons/sfx/DM-CGS-01.xnb</DestFile>
+  <DestTime>2017-03-05T14:21:39.3697401+01:00</DestTime>
+  <Importer>WavImporter</Importer>
+  <ImporterTime>2016-03-30T08:36:08+02:00</ImporterTime>
+  <Processor>SoundEffectProcessor</Processor>
+  <ProcessorTime>2016-03-30T08:36:08+02:00</ProcessorTime>
+  <Parameters>
+    <Key>Quality</Key>
+    <Value>Best</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>

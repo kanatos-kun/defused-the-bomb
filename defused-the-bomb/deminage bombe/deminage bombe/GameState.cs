@@ -23,8 +23,8 @@ namespace defused_the_bomb
             }
         }
 
-        string lastState;
-        string transition;
+        public string lastState { get; private set; }
+        public string transition { get; private set; }
 
 
         Malette[] TblState= new Malette[6];

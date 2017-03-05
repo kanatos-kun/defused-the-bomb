@@ -1,6 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Media;
+using Microsoft.Xna.Framework.Audio;
 using System;
 
 namespace defused_the_bomb
@@ -12,6 +14,9 @@ namespace defused_the_bomb
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+
+        Song music;
+
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -29,7 +34,7 @@ namespace defused_the_bomb
             // TODO: Add your initialization logic here
             graphics.PreferredBackBufferWidth = (int)ScreenManager.Instance.Dimensions.X;
             graphics.PreferredBackBufferHeight =(int)ScreenManager.Instance.Dimensions.Y;
-            IsMouseVisible = true;
+            IsMouseVisible = false;
             graphics.ApplyChanges();
 
             base.Initialize();
@@ -47,7 +52,13 @@ namespace defused_the_bomb
 
             spriteManager.Instance.LoadContent(Content);
             fontManager.Instance.LoadContent(Content);
+            musicManager.Instance.LoadContent(Content);
             ScreenManager.Instance.ContentLoad(Content);
+
+            music = Content.Load<Song>("sons/bgm/fr4s - 8bit2");
+            MediaPlayer.IsRepeating = true;
+            MediaPlayer.Volume = 0.5f;
+            MediaPlayer.Play(music);
             // TODO: use this.Content to load your game content here
         }
 

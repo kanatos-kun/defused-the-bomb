@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>I:/Document/Fichier/Programmation/projet/Framework/__monogame/Deminage bombe/__application/ver6/deminage bombe/deminage bombe/Content/image/win.jpg</SourceFile>
+  <SourceFile>I:/Document/Fichier/Programmation/projet/Framework/__monogame/Deminage bombe/__application/ver7/deminage bombe/deminage bombe/Content/image/win.jpg</SourceFile>
   <SourceTime>2017-02-23T18:51:25.7208507+01:00</SourceTime>
-  <DestFile>I:/Document/Fichier/Programmation/projet/Framework/__monogame/Deminage bombe/__application/ver6/deminage bombe/deminage bombe/Content/bin/Windows/image/win.xnb</DestFile>
-  <DestTime>2017-03-02T10:04:30.0437072+01:00</DestTime>
+  <DestFile>I:/Document/Fichier/Programmation/projet/Framework/__monogame/Deminage bombe/__application/ver7/deminage bombe/deminage bombe/Content/bin/Windows/image/win.xnb</DestFile>
+  <DestTime>2017-03-04T18:26:20.3764508+01:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2016-03-30T08:36:08+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

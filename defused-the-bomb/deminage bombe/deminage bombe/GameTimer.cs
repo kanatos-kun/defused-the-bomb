@@ -48,7 +48,7 @@ namespace defused_the_bomb
         public void Update(GameTime gameTime)
         {
             if (stop)
-              stop = false;
+                stop = false;
 
             time = gameTime;
             if (start)
